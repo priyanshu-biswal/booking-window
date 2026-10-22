@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Service Booking</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="logo">Laundery Service</div>
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#" class="active">Services</a>
+      <a href="#">Contact Us</a>
+      <a href="#">About Us</a>
+    </div>
+    <div class="user-profile">
+      <span class="user-badge">Username</span>
+      </button>
+    </div>
+  </nav>
+
+
+  <div class="main-container">
+    <div class="left-column">
+      <div class="card">
+        <h2 class="card-title text-center">Added Items</h2>
+        <div class="table-container">
+          <table id="cart-table">
+            <thead>
+              <tr>
+                <th>S.No</th>
+                <th>Service Name</th>
+                <th class="text-right">Price</th>
+              </tr>
+            </thead>
+            <tbody id="cart-body">
+              <tr id="empty-row">
+                <td colSpan="3" class="empty-msg">
+                  <div class="info-icon">ⓘ</div>
+                  <div><strong>No Items Added</strong></div>
+                  <small>Add items to the cart from the services bar</small>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="total-row">
+          <span>Total Amount</span>
+          <span id="total-amount">₹0</span>
+        </div>
+      </div>
+      <div class="card">
+        <h3 class="card-title">Book Now</h3>
+        <form id="booking-form">
+          <div class="form-group">
+            <label for="fullname">Full Name</label>
+            <input type="text" id="fullname" placeholder="John Doe" required />
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="email">Email ID</label>
+              <input type="email" id="email" placeholder="mailid@gmail.com" required />
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="0000000000" required />
+            </div>
+          </div>
+
+          <button type="submit" class="btn-book">Book now</button>
+        </form>
+      </div>
+
+    </div>
+    <div class="right-column">
+      <div class="card service-card">
+        <div>
+          <h2 class="card-title">Browse Our Services</h2>
+          <p class="subtitle">
+            Click on the add to cart button to add the services to your cart or press skip
+          </p>
+
+          <div class="image-container">
+            <img id="service-img" src="" alt="Service Image" />
+          </div>
+
+          <div class="service-details">
+            <h3 id="service-name">Service Name</h3>
+            <span id="service-price" class="price-tag">₹0.00</span>
+          </div>
+        </div>
+
+        <div class="card-footer">
+          <div class="action-buttons">
+            <button type="button" id="btn-skip" class="btn-action btn-skip">
+              Skip Item <span>&#8854;</span>
+            </button>
+            <button type="button" id="btn-add" class="btn-action btn-add">
+              Add Item 
+            </button>
+          </div>
+          <p class="info-footer">ⓘ Add the items to the cart and book now</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
